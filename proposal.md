@@ -29,3 +29,7 @@ Player is set out to be a villager in their own islands where they can interact 
 - villagers talking sound
 - different routes
 - mailbox, gifts from villagers
+
+
+external resources:
+https://animalcrossing.fandom.com/wiki/Animal_Crossing_Wiki
