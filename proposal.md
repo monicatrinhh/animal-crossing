@@ -2,16 +2,30 @@
 
 ## Description
 
-Describe what I am going to build: A classic Nintendo game: Animal Crossing Clone
+A classic Nintendo game: Animal Crossing Reboot
+Player is set out to be a villager in their own islands where they can interact with other villagers, trade, build spaces and special activities!
 
 ## Must Have List
 
-- first
-- second
-- third
+- 5 villagers: Tom Nook, Isabelle, Marshal, Zucker, Raymond
+- grid map to place items
+- dialouges with villagers -> multiple choices answers
+- welcoming introduction (tent,etc) and building character (tailored to your true self)
+- bells currency 
+- pick up food and belongings
+- storage
+- building spaces function
+- trading centre (selling and buying)
+- activities to gain items ->
+- catch fish and bugs
+- get friendship points and items from villager
+- digging holes, chopping down woods
 
 ## Nice to Have List
 
-- this studd
-- other stuff
-- more works TT
+- more villagers: Brewster, Daisy Mae
+- village map
+- changing clothes
+- villagers talking sound
+- different routes
+- mailbox, gifts from villagers
