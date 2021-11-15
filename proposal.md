@@ -7,7 +7,7 @@ Player is set out to be a villager in their own islands where they can interact 
 
 ## Must Have List
 
-- 5 villagers: Tom Nook, Isabelle, Marshal, Zucker, Raymond
+- 5 villagers: Tom Nook, Isabelle, Blathers, Gulliver, K.K SLider
 - grid map to place items
 - dialouges with villagers -> multiple choices answers
 - welcoming introduction (tent,etc) and building character (tailored to your true self)
@@ -23,7 +23,7 @@ Player is set out to be a villager in their own islands where they can interact 
 
 ## Nice to Have List
 
-- more villagers: Brewster, Daisy Mae
+- more villagers: Brewster, Daisy Mae, Cyrus and Reese
 - village map
 - changing clothes
 - villagers talking sound
