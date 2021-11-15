@@ -1,3 +1,3 @@
-# https://monicatrinhh.github.io/animal-crossing/
+# Animal Crossing Clone - CS30
 CS30 Major Project - ACNH
 
