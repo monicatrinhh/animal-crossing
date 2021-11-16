@@ -1,6 +1,6 @@
-// Project Name
+// Major Project - Animal Crossing Clone
 // Monica Trinh
-// Date
+// November 16th, 2021
 
 
 
