@@ -51,7 +51,7 @@ function createEmptyArray(rows, cols) {
   for (let y=0; y<rows; y++) {
     board.push([]);
     for (let x=0; x<cols; x++) {
-      if (random(100) < 25) {
+      if (random(100) < 20) {
         board[y].push(1); // river
       }
       else if (random(100) < 50) {
