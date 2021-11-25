@@ -7,10 +7,14 @@ let gridSize = 25;
 let cellWidth; let cellHeight;
 let widthBuffer;
 let grass; let grassPale; 
+let playerImg; 
+let gridDimensions;
+
 
 function preload(){
   grass = loadImage("assets/background/grass.png"); 
-  grassPale = loadImage("assets/background/grass2.jpg");   
+  grassPale = loadImage("assets/background/grass2.jpg");  
+  playerImg = loadImage("assets/player/playerMale.png"); 
 }
 
 function setup() {
@@ -20,11 +24,13 @@ function setup() {
   grid = createEmptyArray(gridSize,gridSize);
   cellWidth = (width-2*widthBuffer)/gridSize  ;
   cellHeight = height/gridSize ;
+ 
 }
 
 function draw() {
-  background(220);
+  background("#2acaea");
   displayGrid();
+  displayPlayer();
 }
 
 function displayGrid() {
@@ -64,3 +70,4 @@ function createEmptyArray(rows, cols) {
   }
   return board;
 }
+

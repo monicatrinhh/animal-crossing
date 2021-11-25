@@ -1,20 +1,18 @@
-let player;
+let defaultPlayer;
 
-function preload(){
-    
+
+class Player {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.dx = 5;
+  }
+  display(){
+    image(playerImg, this.x, this.y, cellWidth, cellWidth);
+  }
 }
 
-class Player(){
-    constructor(){
-        this.x = ;
-        this.year;
-        this.dx = ;
-    }
-
-    display(){
-
-    }
-    move(){
-
-    }
+function displayPlayer(){
+  
+  thePlayer.display();
 }
