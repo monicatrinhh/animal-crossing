@@ -9,7 +9,7 @@ let widthBuffer;
 let grass; let grassPale; 
 let playerImg; 
 let gridDimensions;
-
+let thePlayer;
 
 function preload(){
   grass = loadImage("assets/background/grass.png"); 
@@ -24,7 +24,7 @@ function setup() {
   grid = createEmptyArray(gridSize,gridSize);
   cellWidth = (width-2*widthBuffer)/gridSize  ;
   cellHeight = height/gridSize ;
- 
+  thePlayer = new Player(width-widthBuffer-gridDimensions, cellHeight);
 }
 
 function draw() {
