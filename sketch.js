@@ -31,7 +31,6 @@ function setup() {
 function draw() {
   background("#2acaea");
   displayGrid();
-
   defaultPlayer.move();
   defaultPlayer.display();
 

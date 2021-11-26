@@ -1,5 +1,3 @@
-let inGrid = true;
-
 
 class Player {
   constructor(x, y) {
@@ -11,7 +9,8 @@ class Player {
     image(playerImg, this.x, this.y, cellHeight, cellHeight);
   }
   move() {
-    if (inGrid) {
+
+    if (this.y >= 0 && this.y <= height && this.x >= widthBuffer && this.x <= width - widthBuffer) {
       if (keyIsDown(87)) { //w
         this.y += -this.dx;
       }
@@ -25,13 +24,22 @@ class Player {
         this.x += -this.dx;
       }
     }
-
-  }
-
-  insideGrid() {
-    if (this.y > 0 && this.y < height) {
-      return inGrid = true;
+    else { // bump back
+      if (this.x <= widthBuffer) {
+        this.x += 1;
+      }
+      else if (this.x >= width - widthBuffer) {
+        this.x -= cellWidth;
+      }
+      else if (this.y + cellWidth >= height) {
+        this.y = height - cellWidth;
+      }
+      else if (this.y <= 0) {
+        this.y = width - widthBuffer;
+      }
     }
   }
+
+
 }
 
