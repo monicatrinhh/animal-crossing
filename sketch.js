@@ -25,6 +25,7 @@ function setup() {
   grid = createEmptyArray(gridSize, gridSize);
   cellWidth = (width - 2 * widthBuffer) / gridSize;
   cellHeight = height / gridSize;
+  gridDimensions = cellWidth * gridSize;
   defaultPlayer = new Player(widthBuffer, 0);
 }
 

@@ -4,6 +4,7 @@ class Player {
     this.x = x;
     this.y = y;
     this.dx = 5;
+
   }
   display() {
     image(playerImg, this.x, this.y, cellHeight, cellHeight);
@@ -23,6 +24,8 @@ class Player {
       if (keyIsDown(65)) { //s
         this.x += -this.dx;
       }
+      this.currentX = ceil((this.x - widthBuffer) / cellWidth);
+      this.currentY = ceil(this.y / cellHeight);
     }
     else { // bump back
       if (this.x <= widthBuffer) {
