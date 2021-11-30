@@ -1,55 +1,50 @@
 
-// make the character display a variable so you can toggle between male and female
-
 class Player {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.dx = 3;
-
+    this.dx = 5;
   }
   display() {
     image(playerImg, this.x, this.y, cellHeight, cellHeight);
   }
   move() {
-    this.currentX = floor((this.x - widthBuffer) / cellWidth);
-    this.currentY = floor(this.y / cellHeight);
 
-    if (this.y >= 0 && this.y <= height && this.x >= widthBuffer && this.x <= width - widthBuffer && grid[this.currentY][this.currentX] !== 1) {
+    this.currentX = floor(((this.x + this.dx) - widthBuffer) / cellWidth);
+    this.currentY = floor((this.y + this.dx) / cellHeight);
+
+    if (this.withinBorder()) {
       if (keyIsDown(87)) { //w
-        this.y += -this.dx;
+        // this.currentY = floor(((this.x + this.dx) - widthBuffer) / cellWidth);
+        if (grid[this.currentY][this.currentX] !== 1) {
+          this.y += -this.dx;
+        }
+
       }
-      if (keyIsDown(83)) { //s
+
+      if (keyIsDown(83) && grid[this.currentY][this.currentX] !== 1) { //s
+        // this.currentY = ceil(((this.x + this.dx) - widthBuffer) / cellWidth);
         this.y += this.dx;
       }
-      if (keyIsDown(68)) { //s
+
+      if (keyIsDown(68) && grid[this.currentY][this.currentX] !== 1) { //d
         this.x += this.dx;
       }
-      if (keyIsDown(65)) { //s
+
+      if (keyIsDown(65) && grid[this.currentY][this.currentX] !== 1) { //a
+        // this.currentX = floor(((this.x + this.dx) - widthBuffer) / cellWidth);
         this.x += -this.dx;
       }
 
     }
     else { // bump back
-      if (this.x <= widthBuffer) {
-        this.x += 1;
-      }
-      else if (this.x >= width - widthBuffer) {
-        this.x -= cellWidth;
-      }
-      else if (this.y + cellWidth >= height) {
-        this.y = height - cellWidth;
-      }
-      else if (this.y <= 0) {
-        this.y = width - widthBuffer;
-      }
-      else if (grid[this.currentY][this.currentX] === 1) {
-        this.x = widthBuffer;
-        this.y = 0;
-      }
+      this.x = widthBuffer;
+      this.y = 0;
     }
   }
-
+  withinBorder() {
+    return this.y >= 0 && this.y + cellHeight / 2 <= height && this.x >= widthBuffer && this.x <= width - widthBuffer;
+  }
 
 }
 
