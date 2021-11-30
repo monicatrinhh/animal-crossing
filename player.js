@@ -5,14 +5,17 @@ class Player {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.dx = 5;
+    this.dx = 3;
+
   }
   display() {
     image(playerImg, this.x, this.y, cellHeight, cellHeight);
   }
   move() {
+    this.currentX = floor((this.x - widthBuffer) / cellWidth);
+    this.currentY = floor(this.y / cellHeight);
 
-    if (this.y >= 0 && this.y <= height && this.x >= widthBuffer && this.x <= width - widthBuffer) {
+    if (this.y >= 0 && this.y <= height && this.x >= widthBuffer && this.x <= width - widthBuffer && grid[this.currentY][this.currentX] !== 1) {
       if (keyIsDown(87)) { //w
         this.y += -this.dx;
       }
@@ -25,6 +28,7 @@ class Player {
       if (keyIsDown(65)) { //s
         this.x += -this.dx;
       }
+
     }
     else { // bump back
       if (this.x <= widthBuffer) {
@@ -38,6 +42,10 @@ class Player {
       }
       else if (this.y <= 0) {
         this.y = width - widthBuffer;
+      }
+      else if (grid[this.currentY][this.currentX] === 1) {
+        this.x = widthBuffer;
+        this.y = 0;
       }
     }
   }
