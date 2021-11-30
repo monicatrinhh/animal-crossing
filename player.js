@@ -1,4 +1,6 @@
 
+// make the character display a variable so you can toggle between male and female
+
 class Player {
   constructor(x, y) {
     this.x = x;
