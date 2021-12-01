@@ -25,10 +25,12 @@ class Player {
 
       if (keyIsDown(68)) { //d
         this.x += this.dx;
+        playerDisplay = 2;
       }
 
       if (keyIsDown(65)) { //a
         this.x += -this.dx;
+        playerDisplay = 3;
       }
     }
 

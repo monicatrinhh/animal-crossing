@@ -7,7 +7,7 @@ let gridSize = 20;
 let cellWidth; let cellHeight;
 let widthBuffer;
 let grass; let grassPale;
-let playerImgList; let playerFront; let playerBack;
+let playerImgList, playerFront, playerBack, playerLeft, playerRight;
 let gridDimensions;
 let defaultPlayer;
 let water;
@@ -18,6 +18,9 @@ function preload() {
   grassPale = loadImage("assets/background/grass2.jpg");
   playerFront = loadImage("assets/player/male.png");
   playerBack = loadImage("assets/player/maleBack.png");
+  playerRight = loadImage("assets/player/maleRight.jpg");
+  playerLeft = loadImage("assets/player/maleLeft.jpg");
+
 
 }
 
@@ -31,7 +34,7 @@ function setup() {
   gridDimensions = cellWidth * gridSize;
   defaultPlayer = new Player(widthBuffer, 0);
 
-  playerImgList = [playerFront, playerBack];
+  playerImgList = [playerFront, playerBack, playerRight, playerLeft];
 }
 
 function draw() {
