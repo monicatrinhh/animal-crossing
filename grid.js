@@ -32,6 +32,8 @@ function createEmptyArray(rows, cols) {
                 board[y].push(0); // pale green
             }
             board[0][0] = 2; // player initial station
+            board[0][1] = 2;
+
         }
 
     }
