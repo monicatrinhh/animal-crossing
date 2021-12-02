@@ -19,7 +19,6 @@ Player is set out to be a villager in their own islands where they can interact 
 - activities to gain items ->
 - catch fish and bugs
 - get friendship points and items from villager
-- digging holes, chopping down woods
 - music and sfx
 
 ## Nice to Have List
