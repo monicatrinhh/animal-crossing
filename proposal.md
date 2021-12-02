@@ -21,6 +21,8 @@ Player is set out to be a villager in their own islands where they can interact 
 - get friendship points and items from villager
 - music and sfx
 
+ - UI/UX: bag coin, friendship pts up left, storage, inventory on the right
+
 ## Nice to Have List
 
 - more villagers: Brewster, Daisy Mae, Cyrus and Reese
