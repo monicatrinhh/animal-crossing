@@ -3,7 +3,7 @@ class Player {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.dx = 3;
+    this.dx = 4;
   }
   display() {
     image(playerImgList[playerDisplay], this.x, this.y, cellHeight, cellHeight);
@@ -35,9 +35,20 @@ class Player {
     }
 
     else { // bump back
-      water.play();
-      this.x = widthBuffer;
-      this.y = 0;
+      if (this.y <= 0) {
+        this.y += 1;
+      }
+      else if (this.y >= height - cellWidth) {
+        this.y -= 1;
+      }
+      else if (this.x <= widthBuffer) {
+        this.x += 1;
+      }
+      else {
+        water.play();
+        this.x = widthBuffer;
+        this.y = 0;
+      }
 
     }
 
