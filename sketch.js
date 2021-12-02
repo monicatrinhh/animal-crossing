@@ -11,12 +11,15 @@ let playerImgList, playerFront, playerBack, playerLeft, playerRight;
 let gridDimensions;
 let defaultPlayer;
 let water;
-let blathers, isabelle, kk, nookling, tomNook;
+let blathers, isabelle, kk, tomNook;
+let bellImg, coin;
+let bell;
 
 function preload() {
   grass = loadImage("assets/background/grass.png");
   grassPale = loadImage("assets/background/grass2.jpg");
-
+  bellImg = loadImage("assets/currency/BellBag.png");
+  coin = loadImage("assets/currency/BellCoin.png");
   // player
   playerFront = loadImage("assets/player/male.png");
   playerBack = loadImage("assets/player/maleBack.png");
@@ -30,7 +33,6 @@ function preload() {
   blathers = loadImage("assets/villagers/blathers.png");
   isabelle = loadImage("assets/villagers/isabelle.png");
   kk = loadImage("assets/villagers/KK.png");
-  nookling = loadImage("assets/villagers/nookling.png");
   tomNook = loadImage("assets/villagers/tomNook.png");
 }
 
@@ -42,7 +44,9 @@ function setup() {
   cellWidth = (width - 2 * widthBuffer) / gridSize;
   cellHeight = height / gridSize;
   gridDimensions = cellWidth * gridSize;
+
   defaultPlayer = new Player(widthBuffer, 0);
+  bell = new Bell();
 
   playerImgList = [playerFront, playerBack, playerRight, playerLeft];
 }
@@ -53,6 +57,7 @@ function draw() {
   defaultPlayer.move();
   defaultPlayer.display();
 
+  bellCurrency();
 }
 
 
