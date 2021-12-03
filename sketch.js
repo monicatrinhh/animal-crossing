@@ -14,12 +14,19 @@ let water;
 let blathers, isabelle, kk, tomNook;
 let bellImg, coin;
 let bell;
+let fishImg, fishFunction;
+let shopImg, theShop;
 
 function preload() {
   grass = loadImage("assets/background/grass.png");
   grassPale = loadImage("assets/background/grass2.jpg");
+
+  // currency and functions
   bellImg = loadImage("assets/currency/BellBag.png");
   coin = loadImage("assets/currency/BellCoin.png");
+  fishImg = loadImage("assets/currency/fish.png");
+  shopImg = loadImage("assets/spaces/shop.png");
+
   // player
   playerFront = loadImage("assets/player/male.png");
   playerBack = loadImage("assets/player/maleBack.png");
@@ -47,7 +54,8 @@ function setup() {
 
   defaultPlayer = new Player(widthBuffer, 0);
   bell = new Bell();
-
+  fishFunction = new Fish();
+  theShop = new Shop();
   playerImgList = [playerFront, playerBack, playerRight, playerLeft];
 }
 
@@ -58,6 +66,10 @@ function draw() {
   defaultPlayer.display();
 
   bellCurrency();
+
+  fishDisplay();
+
+  shopDisplay();
 }
 
 
