@@ -16,6 +16,7 @@ let bellImg, coin;
 let bell;
 let fishImg, fishFunction;
 let shopImg, theShop;
+let camera;
 
 function preload() {
   grass = loadImage("assets/background/grass.png");
@@ -57,10 +58,12 @@ function setup() {
   fishFunction = new Fish();
   theShop = new Shop();
   playerImgList = [playerFront, playerBack, playerRight, playerLeft];
+  // camera = createCamera();
 }
 
 function draw() {
   background("#2acaea");
+  // camera(defaultPlayer.x / 1000, defaultPlayer.y / 1000, 1000);
   displayGrid();
   defaultPlayer.move();
   defaultPlayer.display();
